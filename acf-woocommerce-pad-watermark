@@ -1,0 +1,8 @@
+// Neste caso, estou adicionando através de uma função o campo CPF
+
+function wc_pdf_watermark_extend_template_tags( $parsed_text, $unparsed_text, $order, $product ) {
+	// Look for {product_title} in text and replace it with the product title
+	$parsed_text = str_replace( '{billing_cpf}', $order->billing_cpf, $parsed_text );
+	return $parsed_text;
+}
+add_filter( 'woocommerce_pdf_watermark_parse_template_tags', 'wc_pdf_watermark_extend_template_tags', 10, 4 );
