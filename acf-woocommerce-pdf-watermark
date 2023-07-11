@@ -1,4 +1,4 @@
-// Neste caso, estou adicionando através de uma função o campo CPF
+// Neste caso, estou adicionando através de uma função o campo CPF na marca dagua do Woocommerce PDF Watermark
 
 function wc_pdf_watermark_extend_template_tags( $parsed_text, $unparsed_text, $order, $product ) {
 	// Look for {product_title} in text and replace it with the product title
